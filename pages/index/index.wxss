@@ -1,0 +1,97 @@
+/* pages/index/index.wxss */
+
+
+
+/*用来包裹所有的小圆点  */
+.dots {
+	width: 156rpx;
+	height: 36rpx;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	left: 320rpx;
+	bottom: 20rpx;
+}
+
+/*未选中时的小圆点样式 */
+.dot {
+	width: 17rpx;
+	height: 17rpx;
+	border-radius: 50%;
+	margin-right: 26rpx;
+	background-color: white;
+}
+
+/*选中以后的小圆点样式  */
+.active {
+	width: 17rpx;
+	height: 17rpx;
+	background-color: #969DA3;
+}
+
+.driver {
+	background: #DADADA;
+	width: 100%;
+	margin-top: 20rpx;
+	height: 1rpx;
+}
+
+.item {
+	padding: 30rpx 0;
+	margin: 0 30rpx;
+	background-color: #fff;
+	color: #787878;
+	border-bottom: 1rpx solid #eaeaea;
+	display: flex;
+	flex-direction: row;
+}
+
+.item image {
+	display: block;
+	width: 195rpx;
+	height: 195rpx;
+	border-radius: 15rpx;
+}
+
+.item_middle {
+	flex: 1;
+	margin-left: 20rpx;
+	overflow: hidden;
+}
+
+.item_middle .title {
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 600;
+}
+
+.item_middle .recom_box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.item_middle .recom {
+	display: block;
+	font-size: 24rpx;
+	color: #666;
+	margin-top: 15rpx;
+}
+
+
+
+.item_middle .num {
+	display: block;
+	font-size: 24rpx;
+	color: #666;
+	margin-top: 40rpx;
+}
+
+.item_right .buy {
+	font-size: 24rpx;
+	color: white;
+	padding: 15rpx 30rpx;
+	border-radius: 5rpx;
+	background: #F85444;
+	line-height: 195rpx;
+}

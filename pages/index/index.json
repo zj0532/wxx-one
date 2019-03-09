@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "星辰谷户外主题乐园",
+  "usingComponents": {
+    "i-rate": "../../widget/rate/index"
+  }
+}

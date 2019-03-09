@@ -1,0 +1,63 @@
+<view class='warp'>
+  <view class='userinfo flex_center'>
+    <block wx:if="{{!hasUserInfo}}">
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>立即登录</button>
+    </block>
+    <block wx:else>
+      <view class='column flex_center'>
+        <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}' mode='cover'></image>
+        <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='column'>
+    <view class='ali' bindtap='toOrder'>
+      <text>余额  ￥0.00</text>
+        <view class='ali-button'>
+          <button>去充值</button>
+        </view>
+    </view>
+  </view>
+
+  <view class='body column'>
+    <view class='row flex_vertical item' bindtap='toOrder'>
+      <image class='oneImg' src='../../img/ic_order.png'></image>
+      <text>娱乐订单</text>
+      <image class='arrow' src='../../img/arrow_right.png'></image>
+    </view>
+
+    <view class='dirver'></view>
+
+    <view class='row flex_vertical item' bindtap='toOrder'>
+      <image class='oneImg' src='../../img/ic_order.png'></image>
+      <text>餐饮订单</text>
+      <image class='arrow' src='../../img/arrow_right.png'></image>
+    </view>
+
+    <view class='dirver'></view>
+
+    <view class='row flex_vertical item' bindtap='toOrder'>
+      <image class='oneImg' src='../../img/ic_order.png'></image>
+      <text>零钱明细</text>
+      <image class='arrow' src='../../img/arrow_right.png'></image>
+    </view>
+
+    <view class='dirver'></view>
+
+    <view class='row flex_vertical item' bindtap="toBindPhone">
+      <image class="oneImg" src="../../img/ic_phone.png"></image>
+      <text>手机号</text>
+      <view class='bind'>去绑定</view>
+    </view>
+
+    <view class='dirver'></view>
+
+    <view class='row flex_vertical item' bindtap='toBindCardId'>
+      <image class='oneImg' src='../../img/ic_shenfen.png'></image>
+      <text>身份信息</text>
+      <view class='bind'>去绑定</view>
+    </view>
+
+  </view>
+</view>

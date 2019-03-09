@@ -1,0 +1,38 @@
+<view>
+  <view class="warp">
+		<swiper class='swiper_box' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true"
+		 current="{{currentSwiper}}" bindchange="swiperChange">
+			<block wx:for="{{banner}}">
+				<swiper-item>
+					<image class='img' src="{{item.Bn_img}}" class="slide-image"/>
+				</swiper-item>
+			</block>
+		</swiper>
+		<!--重置小圆点的样式  -->
+		<view class="dots">
+			<block wx:for="{{imgUrls}}">
+				<view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+			</block>
+		</view>
+	</view>
+  <!-- 分割线 -->
+  <view class='driver'></view>
+
+  <block wx:for-items="{{product}}">
+    <view class='flex item' id='{{item.Bps_id}}' bindtap='go'>
+      <view class='item_left'>
+        <image src='{{item.Bps_img}}' />
+      </view>
+      <view class='flex_auto item_middle'>
+        <view><text class='title'>{{item.Bps_product_name}}</text></view>
+        <view class='recom_box'><text class='recom'>推荐指数：</text>
+          <i-rate disabled='{{true}}' value='{{item.Bps_tuijianzhishu}}'></i-rate>
+        </view>
+        <view><text class='num'>售出数量:{{item.Bps_count}}张</text></view>
+      </view>
+      <view class='item_right'>
+        <view><text class='buy'>购票</text></view>
+      </view>
+    </view>    
+  </block>
+</view>

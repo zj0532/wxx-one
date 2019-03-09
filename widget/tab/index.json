@@ -1,0 +1,8 @@
+{
+	"disableScroll":false,
+  "component": true,
+  "usingComponents":
+  {
+    "i-badge": "../badge/index"
+  }
+}
