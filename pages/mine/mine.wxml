@@ -10,18 +10,18 @@
       </view>
     </block>
   </view>
-
-  <view class='column'>
+  <block wx:if="{{hasUserInfo}}">
+  <view class='body colum'>
     <view class='ali' bindtap='toOrder'>
       <text>余额  ￥0.00</text>
-        <view class='ali-button'>
-          <button>去充值</button>
-        </view>
+      <view class='ali-button'>
+        <button>去充值</button>
+      </view>
     </view>
   </view>
 
   <view class='body column'>
-    <view class='row flex_vertical item' bindtap='toOrder'>
+    <view class='row flex_vertical item' bindtap='toYLOrder'>
       <image class='oneImg' src='../../img/ic_order.png'></image>
       <text>娱乐订单</text>
       <image class='arrow' src='../../img/arrow_right.png'></image>
@@ -29,7 +29,7 @@
 
     <view class='dirver'></view>
 
-    <view class='row flex_vertical item' bindtap='toOrder'>
+    <view class='row flex_vertical item' bindtap='toCYOrer'>
       <image class='oneImg' src='../../img/ic_order.png'></image>
       <text>餐饮订单</text>
       <image class='arrow' src='../../img/arrow_right.png'></image>
@@ -37,7 +37,7 @@
 
     <view class='dirver'></view>
 
-    <view class='row flex_vertical item' bindtap='toOrder'>
+    <view class='row flex_vertical item' bindtap='toSmallInfo'>
       <image class='oneImg' src='../../img/ic_order.png'></image>
       <text>零钱明细</text>
       <image class='arrow' src='../../img/arrow_right.png'></image>
@@ -45,19 +45,20 @@
 
     <view class='dirver'></view>
 
-    <view class='row flex_vertical item' bindtap="toBindPhone">
+    <view class='row flex_vertical item' bindtap="toTel">
       <image class="oneImg" src="../../img/ic_phone.png"></image>
       <text>手机号</text>
-      <view class='bind'>去绑定</view>
+      <view class='bind' bindtap='toBindTel'>去绑定</view>
     </view>
 
     <view class='dirver'></view>
 
-    <view class='row flex_vertical item' bindtap='toBindCardId'>
+    <view class='row flex_vertical item' bindtap='toCard'>
       <image class='oneImg' src='../../img/ic_shenfen.png'></image>
       <text>身份信息</text>
-      <view class='bind'>去绑定</view>
+      <view class='bind' bindtap='toBindCard'>去绑定</view>
     </view>
 
   </view>
+  </block>
 </view>

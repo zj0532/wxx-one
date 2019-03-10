@@ -1,3 +1,5 @@
+var app = getApp()
+
 // pages/mine/mine.js
 Page({
 
@@ -5,16 +7,96 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     userInfo:{
+       nickName:"凯迪",
+       avatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/n6lXPpKFDk2a6dd5uxa5Nxic4ibhGpbl9e4C6AT737WCb9GbVvRJSqngKXT3ThKc3k6p4ibNu2Y6QaWWzK2QFFlNg/132",
+     },
+     hasUserInfo:false,
+     canIUse:wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    if(app.globalData.userInfo){
+      this.setData({
+        userInfo:app.globalData.userInfo,
+        hasUserInfo:true,
+      })
+    }else if(this.data.canIUse){
+      app.userInfoReadyCallback = res =>{
+        this.setData({
+          userInfo:res.userInfo,
+          hasUserInfo:true,
+        })
+      }
+    }else{
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success:res=>{
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo:res.userInfo,
+            hasUserInfo:true,
+          })
+        }
+      })
+    }
   },
 
+  getUserInfo:function(e){
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo:e.detail.userInfo,
+      hasUserInfo:true,
+    })
+  },
+
+  //事件处理函数
+  //娱乐订单
+  toYLOrder:function(){
+    wx.navigateTo({
+      url: '/pages/ylorder/ylorder',
+    })
+  },
+  toCYOrer:function(){
+    wx.navigateTo({
+      url: '/pages/cyorder/cyorder',
+    })
+  },
+  //零钱明细
+  toSmallInfo:function(){
+    wx.navigateTo({
+      url: '/pages/SmallInfo/SmallInfo',
+    })
+  },
+  //手机号
+  toTel: function () {
+    wx.navigateTo({
+      url: '/pages/Tel/Tel',
+    })
+  },
+  //手机号绑定
+  toBindTel: function () {
+    wx.navigateTo({
+      url: '/pages/BindTel/BindTel',
+    })
+  },
+  //身份信息
+  toCard: function () {
+    wx.navigateTo({
+      url: '/pages/Card/Card',
+    })
+  },
+  //身份信息绑定
+  toBindCard: function () {
+    wx.navigateTo({
+      url: '/pages/BindCard/BindCard',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

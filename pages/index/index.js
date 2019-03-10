@@ -11,38 +11,7 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
-    currentSwiper: 0,
-    banner: [],
-    imgUrls: [
-      '../../images/banner1.png',
-      '../../images/banner2.png',
-      '../../images/banner3.png'
-    ],
-    items: [{
-      id: "1",
-      title: "汽车影院",
-      recom: 4.5,
-      image: "../../images/item1.png"
-    },
-    {
-      id: "2",
-      title: "跑马场",
-      recom: 4.5,
-      image: "../../images/item2.png"
-    },
-    {
-      id: "3",
-      title: "卡丁车竞技",
-      recom: 4.5,
-      image: "../../images/item3.png"
-    },
-    {
-      id: "4",
-      title: "农业采摘园",
-      recom: 4.5,
-      image: "../../images/item4.png"
-    }
-    ]
+    currentSwiper: 0
   },
 
   /**

@@ -1,35 +1,44 @@
 {
-  "pages":[
-    "pages/mine/mine",
+  "pages": [
     "pages/index/index",
+    "pages/ylorder/ylorder",
+    "pages/mine/mine",
+
     "pages/eat/eat",
     "pages/content/content",
     "pages/Swiper/Swiper",
     "pages/detail/detail",
+    "pages/cyorder/cyorder",
+    "pages/SmallInfo/SmallInfo",
+    "pages/Tel/Tel",
+    "pages/BindTel/BindTel",
+    "pages/Card/Card",
+    "pages/BindCard/BindCard",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"#bfbfbf",
-    "selectedColor":"#2c2c2c",
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2c2c2c",
     "borderStyle": "black",
-    "list":[{
-      "selectedIconPath": "img/homepage_fill.png",
-      "iconPath": "img/homepage.png",
-      "pagePath": "pages/index/index",
-      "text": "娱乐"
-    },
-    {
-      "selectedIconPath":"img/homepage_fill.png",
-      "iconPath":"img/homepage.png",
-      "pagePath":"pages/eat/eat",
-      "text":"餐饮"
-    },
+    "list": [
+      {
+        "selectedIconPath": "img/homepage_fill.png",
+        "iconPath": "img/homepage.png",
+        "pagePath": "pages/index/index",
+        "text": "娱乐"
+      },
+      {
+        "selectedIconPath": "img/homepage_fill.png",
+        "iconPath": "img/homepage.png",
+        "pagePath": "pages/eat/eat",
+        "text": "餐饮"
+      },
       {
         "selectedIconPath": "img/mine_fill.png",
         "iconPath": "img/mine.png",
@@ -37,6 +46,5 @@
         "text": "我的"
       }
     ]
-  },
-    "appname": "星辰谷户外主题乐园"
+  }
 }
