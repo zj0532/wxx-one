@@ -3,7 +3,11 @@ const app = getApp()
 var call = require("../../utils/request.js")
 var signUtil = require("../../utils/signutil.js")
 Page({
-
+  getPhoneNumber(e) {
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+  },
   /**
    * 页面的初始数据
    */
@@ -13,13 +17,12 @@ Page({
     duration: 1000,
     currentSwiper: 0
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
      var that = this
-
+  
   /**
   * 获取banner
   */
@@ -50,7 +53,10 @@ Page({
       time_stamp: time_stamp,
       sign: sign
     }, this.onListSuccess, this.onListFail);
+
   },
+
+ 
 
   /**
   * 请求成功

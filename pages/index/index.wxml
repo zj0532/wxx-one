@@ -4,7 +4,7 @@
 		 current="{{currentSwiper}}" bindchange="swiperChange">
 			<block wx:for="{{banner}}">
 				<swiper-item>
-					<image class='img' src="{{item.Bn_img}}" class="slide-image"/>
+					<image class='img' src="{{item.Bn_img}}"/>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -17,7 +17,6 @@
 	</view>
   <!-- 分割线 -->
   <view class='driver'></view>
-
   <block wx:for-items="{{product}}">
     <view class='flex item' id='{{item.Bps_id}}' bindtap='go'>
       <view class='item_left'>

@@ -1,5 +1,6 @@
 var app = getApp()
-
+var call = require("../../utils/request.js")
+var signUtil = require("../../utils/signutil.js")
 // pages/mine/mine.js
 Page({
 
@@ -44,10 +45,40 @@ Page({
         }
       })
     }
+    //登录接口
+    var user_login = '';
+    wx.login({
+      success: res => {
+        /**
+         * 登录
+         */
+        var api_code = app.globalData.api_code
+        var time_stamp = call.reateTimeStamp();
+        var user_login = {
+          api_code: api_code,
+          time_stamp: time_stamp,
+          phonetype: '小程序',
+          wxpingzheng: res.code,
+        }
+      var sign = signUtil.getbannerSign(user_login);
+      call.request('user/login', {
+        api_code: api_code,
+        time_stamp: time_stamp,
+        phonetype: '小程序',
+        wxpingzheng: res.code,
+        sign: sign
+      }, this.onUserLoginSuccess, this.onUserLoginFail);
+      }
+    })
   },
-
+  onUserLoginSuccess:function(data){
+      console.log(data);
+  },
+  onUserLoginFail:function(data){
+    console.log(data);
+  },
   getUserInfo:function(e){
-    console.log(e)
+
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo:e.detail.userInfo,

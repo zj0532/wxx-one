@@ -13,6 +13,10 @@
 	bottom: 20rpx;
 }
 
+.img{
+  width: 100%;
+}
+
 /*未选中时的小圆点样式 */
 .dot {
 	width: 17rpx;

@@ -9,8 +9,10 @@ App({
     // 登录
     wx.login({
       success: res => {
+        var that = this
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log('code:' + res.code)
+        that.globalData.code = res.code
+        console.log('code:' + this.globalData.code)
       }
     })
     // 获取用户信息
@@ -30,6 +32,10 @@ App({
               }
             }
           })
+        }else{
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
         }
       }
     })
@@ -38,8 +44,17 @@ App({
     userInfo: null,
     user_state: false,
     api_code: "e41cb9758974db0c5e102a655de20783",
-    api_secret: "963de233dc0c5b5e580bcfe5db1ad25b"
+    api_secret: "963de233dc0c5b5e580bcfe5db1ad25b",
+    code:null,
   },
-
+  user_login:function(){
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('返回之前:' + res.code);
+        return res.code
+      }
+    })
+  },
 
 })
