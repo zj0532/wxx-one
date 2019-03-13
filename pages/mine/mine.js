@@ -54,18 +54,19 @@ Page({
          */
         var api_code = app.globalData.api_code
         var time_stamp = call.reateTimeStamp();
+        var code = res.code
         var user_login = {
           api_code: api_code,
           time_stamp: time_stamp,
           phonetype: '小程序',
-          wxpingzheng: res.code,
+          wxpingzheng: code,
         }
       var sign = signUtil.getbannerSign(user_login);
       call.request('user/login', {
         api_code: api_code,
         time_stamp: time_stamp,
         phonetype: '小程序',
-        wxpingzheng: res.code,
+        wxpingzheng: code,
         sign: sign
       }, this.onUserLoginSuccess, this.onUserLoginFail);
       }
@@ -73,6 +74,11 @@ Page({
   },
   onUserLoginSuccess:function(data){
       console.log(data);
+      var that = this;
+      that.setData({
+        userinfo:data
+      })
+    app.globalData.us_session = data.us_session;
   },
   onUserLoginFail:function(data){
     console.log(data);
@@ -87,6 +93,12 @@ Page({
   },
 
   //事件处理函数
+  //充值
+  toRecharge:function(){
+    wx.navigateTo({
+      url: '/pages/recharge/recharge',
+    })
+  },
   //娱乐订单
   toYLOrder:function(){
     wx.navigateTo({

@@ -1,0 +1,42 @@
+/* pages/recharge/recharge.wxss */
+.block{
+  width: 28%;
+  height: 100rpx;
+  border: 1rpx red solid;
+  margin: 30rpx 0 0 20rpx;
+  border-radius:5px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  
+}
+.block-red{
+   width: 28%;
+  height: 100rpx;
+  border: 1rpx red solid;
+  margin: 30rpx 0 0 20rpx;
+  border-radius:5px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+}
+.text{
+  margin-top: 10px
+}
+
+.actual{
+  clear:both;
+  text-align: center;
+  font-size: 14px;
+}
+.height{
+   clear:both;
+  height: 30rpx;
+}
+.button button{
+  background-color: red;
+  color: white;
+  width:95%;
+}

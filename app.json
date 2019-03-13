@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/recharge/recharge",
     "pages/mine/mine",
     "pages/index/index",
     "pages/login/login",
     "pages/ylorder/ylorder",
-
+    
     "pages/eat/eat",
     "pages/content/content",
     "pages/Swiper/Swiper",

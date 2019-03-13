@@ -44,7 +44,8 @@ App({
     userInfo: null,
     user_state: false,
     api_code: "e41cb9758974db0c5e102a655de20783",
-    api_secret: "963de233dc0c5b5e580bcfe5db1ad25b",
+    //api_secret: "963de233dc0c5b5e580bcfe5db1ad25b", 
+    api_secret: "cb952c169b3a08dabfcb69570d09c04a",
     code:null,
   },
   user_login:function(){

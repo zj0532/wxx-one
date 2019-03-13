@@ -13,9 +13,9 @@
   <block wx:if="{{hasUserInfo}}">
   <view class='body colum'>
     <view class='ali' bindtap='toOrder'>
-      <text>余额  ￥0.00</text>
+      <text>余额  ￥{{userinfo.us_yue}}</text>
       <view class='ali-button'>
-        <button>去充值</button>
+        <button bindtap='toRecharge'>去充值</button>
       </view>
     </view>
   </view>

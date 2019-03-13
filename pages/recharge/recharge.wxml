@@ -1,0 +1,35 @@
+<view style='display:block;'>
+  <block wx:for="{{recharge}}">
+    <view id='{{index}}'  bindtap='choice'>
+      <block wx:if="{{index == clickId}}">
+        <view class="block-red">
+          <view  class='text'>
+          <text>{{item.pay_price}}元</text>
+          </view>
+          <view>
+          <text>送{{item.shiji_money-item.pay_price}}元</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="block">
+          <view  class='text'>
+          <text>{{item.pay_price}}元</text>
+          </view>
+          <view>
+          <text>送{{item.shiji_money-item.pay_price}}元</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+  <view class='height'></view>
+  <view class='actual'>
+    <text>实际到账:{{money}}元</text>
+  </view>
+  <view class='height'></view>
+  <view class='button'>
+    <button>充值</button>
+  </view>
+</view>
+

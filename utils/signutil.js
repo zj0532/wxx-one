@@ -2,7 +2,9 @@ var app = getApp();
 //项目URL相同部分，减轻代码量，同时方便项目迁移
 //这里因为我是本地调试，所以host不规范，实际上应该是你备案的域名信息
 var api_code = "e41cb9758974db0c5e102a655de20783";
-var api_secret = "963de233dc0c5b5e580bcfe5db1ad25b";
+var api_secret = "cb952c169b3a08dabfcb69570d09c04a";
+
+
 var utilMd5 = require('md5.js');
 
 // object-->string
